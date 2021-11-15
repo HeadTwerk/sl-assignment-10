@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-sm">
+    <button mat-raised-button [routerLink]="[ {
+      outlets: {list:['todo-list']}}]">Show List</button>
+      <router-outlet name="list"></router-outlet>
+  </div>
+  <div class="col-sm">
+    <button mat-raised-button [routerLink]="[{
+      outlets: {details: 'todo-details'}}]">View Details</button>
+      <router-outlet name="details"></router-outlet>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <app-spacex></app-spacex>
+  
